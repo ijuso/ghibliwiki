@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Studio Ghibli</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <style>
+      body {
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body class="container">
+    <header>
+      <%- include('../partials/header') %>
+    </header>
+    <main>
+      <div class="jumbotron">
+        <table>
+            <% for(var i=0; i < myData.length; i++) { %>
+               <tr>
+                 <td><%= myData[i].title %></td>
+                 <td><%= myData[i].original_title %></td>
+               </tr>
+            <% } %>
+            </table>
+      </div>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
